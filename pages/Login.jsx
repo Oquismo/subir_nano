@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import mediano from "../img/mediano.jpeg";
+import {Link} from "react-router-dom";
 import horarios from "../img/horarios.jpeg";
 
 function Login() {
@@ -130,6 +131,7 @@ function Login() {
           {readMore2 && (
             <span id="mas2">
               <p>Hola, soy Pepito</p>
+              
             </span>
           )}
           <button onClick={readMore2} id="botoncito" className="botonleerMas">
@@ -221,7 +223,16 @@ function Login() {
             </ul>
           </nav>
         </div>
+
+
       </section>
+
+
+
+
+      <Link to="/construccion" className="nav-button">
+        Ir a construccion
+      </Link>
     </>
   );
 }
