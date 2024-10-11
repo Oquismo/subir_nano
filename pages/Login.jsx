@@ -232,6 +232,10 @@ function Login() {
 
       <Link to="/construccion" className="nav-button">
         Ir a construccion
+      </Link> 
+      <br />
+      <Link to="/inicio" className="nav-button">
+        Ir a construccion
       </Link>
     </>
   );
