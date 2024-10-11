@@ -1,0 +1,213 @@
+.scene {
+  width: 300px;
+  height: 200px;
+  position: relative;
+  background-color: #87CEEB;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.car {
+  width: 120px;
+  height: 60px;
+  background-color: #FF0000;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.wheel {
+  width: 30px;
+  height: 30px;
+  background-color: #333;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -10px;
+}
+
+.wheel-left {
+  left: 10px;
+}
+
+.wheel-right {
+  right: 10px;
+}
+
+.alonso-duck {
+  width: 40px;
+  height: 40px;
+  background-color: #FFD700;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.alonso-duck::before {
+  content: "";
+  width: 20px;
+  height: 10px;
+  background-color: #FFA500;
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50% 50% 0 0;
+}
+
+.alonso-eyes {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.alonso-eye {
+  width: 8px;
+  height: 8px;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.alonso-eyebrows {
+  position: absolute;
+  top: 6px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.alonso-eyebrow {
+  width: 10px;
+  height: 2px;
+  background-color: #000;
+  transform: rotate(-10deg);
+}
+
+.alonso-beard {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 6px;
+  background-color: #8B4513;
+  border-radius: 0 0 10px 10px;
+}
+
+.road {
+  width: 100%;
+  height: 40px;
+  background-color: #808080;
+  position: absolute;
+  bottom: 0;
+}
+
+.construction-sign {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #FFA500;
+  color: #000;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.scene {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #87CEEB;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.road {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 20%;
+  background-color: #808080;
+}
+
+.car {
+  width: 120px;
+  height: 60px;
+  background-color: #FF0000;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 15%; /* Ajustado para que esté justo encima de la carretera */
+  transition: left 0.05s linear; /* Añadido para suavizar el movimiento */
+}
+
+.wheel {
+  width: 30px;
+  height: 30px;
+  background-color: #333;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -10px;
+}
+
+.wheel-left {
+  left: 10px;
+}
+
+.wheel-right {
+  right: 10px;
+}
+
+.alonso-duck {
+  width: 40px;
+  height: 40px;
+  background-color: #FFD700;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* ... (resto de los estilos existentes) ... */
+
+.construction-sign {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2em;
+  font-weight: bold;
+  color: #FF0000;
+  background-color: #FFFF00;
+  padding: 10px;
+  border-radius: 5px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.fullscreen-scene {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #87CEEB;
+}
