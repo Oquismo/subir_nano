@@ -231,12 +231,13 @@ function Login() {
 
 
       <Link to="/construccion" className="nav-button">
-        Ir a construccion
+        Ir a construccion "(prueba)"
       </Link> 
-      <br />
       <Link to="/inicio" className="nav-button">
-        Ir a construccion
+        Ir a inicio "(prueba)"
       </Link>
+      
+
     </>
   );
 }
