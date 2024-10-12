@@ -7,8 +7,9 @@ import '../styles/style2.css'
 import Login from '../pages/Login'
 import '../styles/alonso.css'
 import Construccion from '../pages/Construccion'
+import '../styles/apiStyles.css'
+import { UsuarioProvider } from '../contexto/UsuarioContext'
 
-// Nuevo componente de layout
 const Layout = ({ children }) => (
   <>
     <Header />
@@ -18,6 +19,7 @@ const Layout = ({ children }) => (
 
 createRoot(document.getElementById('root')).render(
   <Router>
+    <UsuarioProvider>
     <Suspense fallback={<div>Cargando...</div>}>
       <Routes>
         <Route path='/' element={<Layout><Login/></Layout>}/>
@@ -26,5 +28,6 @@ createRoot(document.getElementById('root')).render(
         
       </Routes>
     </Suspense>
+    </UsuarioProvider>
   </Router>
 )

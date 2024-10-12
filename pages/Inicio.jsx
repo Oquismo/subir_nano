@@ -1,28 +1,51 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef, useContext } from "react";
+import { useEffect } from "react";
 import mediano from "../img/mediano.jpeg";
 import horarios from "../img/horarios.jpeg";
 import axios from "axios";
+import { usuarioContext } from "../contexto/UsuarioContext";
+
 
 
 function Login() {
 
 
-  const [traerEscuderia, setTaerEscuderia] = useState([]);
 
-  useEffect(() => {
-    axios.get(import.meta.env.VITE_URL_ESCUDERIA)
-      .then(resultados => {
-        setTaerEscuderia(resultados.data);
-      })
-      .catch(error => {
-        console.log(error);
-        console.error('Error al obtener los datos:', error);
-      });
-  }, []);
+    const { login } = useContext(usuarioContext);
+
+    const [error,setError] = useState('');
+
+    const usuarioRef = useRef();
+    const contraRef = useRef();
 
 
     const [showMore, setShowMore] = useState(false);
     const [showMore2, setShowMore2] = useState(false);
+
+    function chekearUsuario(e) {
+      e.preventDefault();
+
+      let objetoAMandar ={
+        usuario: usuarioRef.current.value,
+        contraRef: contraRef.current.value
+      }
+axios.post('http://localhost:3000/usuarios', objetoAMandar).then ( datos =>{
+  console.log(datos.data)
+})
+    }
+    const [traerEscuderia, setTaerEscuderia] = useState([]);
+
+    useEffect(() => {
+      axios.get(import.meta.env.VITE_URL_ESCUDERIA)
+        .then(resultados => {
+          setTaerEscuderia(resultados.data);
+        })
+        .catch(error => {
+          console.log(error);
+          console.error('Error al obtener los datos:', error);
+        });
+    }, []);
+  
   
     const readMore = () => {
       setShowMore(!showMore);
@@ -35,18 +58,17 @@ function Login() {
 
   return (
     <>
-{/* <h1>Bienvenido  + {usuario}</h1>  */}
+    {error}
 
 
-{traerEscuderia.map(escuderia => {
-        return (
-          <div key={escuderia.id_equipo}>
-            <h3>{escuderia.nombres}</h3> {/* Asegúrese de que la propiedad sea "nombre" en lugar de "nombres" */}
-            <h2>{escuderia.piloto}</h2>
-            <p>Información adicional sobre el equipo {escuderia.id_equipo}</p> {/* Agreg más información si es necesario */}
-          </div>
-        );
-      })}
+<form action="#" method="psot " onSubmit={chekearUsuario}>
+<label htmlFor="usu">Nombre de Usuario:</label>
+<input type="text"  name="usuario" id="usu" ref={usuarioRef}/> <br />
+<label htmlFor="pass">Contraseña</label>
+<input type="password" name="password" id="pass" ref={contraRef} /> <br />
+<input type="submit" value="iniciar sesion" />
+</form>
+
  <section className="contenedor">
         <div className="card">
           <img src={mediano} alt="f1" className="card_imagen" />
@@ -161,15 +183,17 @@ function Login() {
           <h3>Calendario</h3>
           <p>
             Aquí podrás encontrar los horarios de las carreras del F1
+            
             {showMore2 && (
               <>
+ 
                 <br />
-              
+               {/* infoprivada aqui va la info que no se puede ver  */} 
               </>
             )}
           </p>
           <button onClick={readMore2} id="botoncito" className="botonleerMas">
-            {showMore2 ? "Leer menos" : "Leer más"}
+            {showMore2 ? "Leer menos" : "Leer más"} 
           </button>
           <nav className="redes__redes" style={{ "--count": 4 }}>
             <ul className="lista__redes">
@@ -257,6 +281,23 @@ function Login() {
           </nav>
         </div>
       </section>
+      <div>
+       
+        </div>
+      
+
+        {traerEscuderia.map(escuderia => {
+        return (
+          <div className="datos_api"  key={escuderia.id_escuderia}>
+           <h3>Equipo</h3>
+            <h1>{escuderia.nombre_escuderia}</h1>
+            <p>Piloto</p>
+            <h4>{escuderia.nombre_piloto}</h4>
+            {/* <p>Información adicional sobre el equipo {informacion.comentario}</p>  */}
+          </div>
+        );
+      })}
+
 
 
       

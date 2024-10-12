@@ -7,7 +7,7 @@ const AlonsoDuck = () => {
   const [isJumping, setIsJumping] = useState(false);
 
   const jump = useCallback(() => {
-    // ... (código de salto existente) ...
+ 
   }, [isJumping]);
 
   useEffect(() => {
@@ -39,7 +39,7 @@ const AlonsoDuck = () => {
       <div className="scene">
         <div className="construction-sign">EN CONSTRUCCIÓN</div>
         <div className="road"></div>
-        <div className="car" style={{ left: `${carPosition}%` }}>
+        <div className="car green" style={{ left: `${carPosition}%` }}>
           <div className="wheel wheel-left"></div>
           <div className="wheel wheel-right"></div>
           <div className="alonso-duck" style={{ bottom: `${duckPosition}px` }}>
