@@ -1,27 +1,11 @@
-import React, { useState, useRef, useContext } from "react";
-import { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import mediano from "../img/mediano.jpeg";
+import {Link} from "react-router-dom";
 import horarios from "../img/horarios.jpeg";
-import axios from "axios";
 
-function Inicio() {
+function Login() {
   const [showMore, setShowMore] = useState(false);
   const [showMore2, setShowMore2] = useState(false);
-  const [traerEscuderia, setTaerEscuderia] = useState([]);
-  // const [comentarios, setComentarios] = useState([]);
-  // aqui va ir la seccion de comentarios donde los usuarios van a poder comentar 
-
-  useEffect(() => {
-    axios
-      .get(import.meta.env.VITE_URL_ESCUDERIA)
-      .then((resultados) => {
-        setTaerEscuderia(resultados.data);
-      })
-      .catch((error) => {
-        console.log(error);
-        console.error("Error al obtener los datos:", error);
-      });
-  }, []);
 
   const readMore = () => {
     setShowMore(!showMore);
@@ -33,24 +17,22 @@ function Inicio() {
 
   return (
     <>
+    
       <section className="contenedor">
         <div className="card">
           <img src={mediano} alt="f1" className="card_imagen" />
+          <span id="puntos">...</span>
           <p id="inicio__texto">
             Aston Martin ya prepara mejoras,
-            {showMore ? (
-              <>
-                el equipo de Silverstone trabaja a contrareloj para mejorar un
-                coche que a día de hoy resta mucho de lo que fue el año pasado.
-                <br /> En sus declaraciones el piloto asturiano ha anunciado que
-                se encuentra muy motivado y que van en buena dirección. <br />
-              </>
-            ) : (
-              <span id="puntos">...</span>
+            {showMore && (
+              <span id="mas">
+
+              </span>
             )}
           </p>
           <button onClick={readMore} id="botoncito" className="botonleerMas">
-            {showMore ? "Leer menos" : "Leer más"}
+          {showMore ? "Inicia sesion para ver mas": "Leer mas" }
+  
           </button>
           <nav className="redes__redes" style={{ "--count": 4 }}>
             <ul className="lista__redes">
@@ -145,17 +127,16 @@ function Inicio() {
             className="card_imagen"
           />
           <h3>Calendario</h3>
-          <p>
-            Aquí podrás encontrar los horarios de las carreras del F1
-            {showMore2 && (
-              <>
-                <br />
-                <p>joskdhd</p>
-              </>
-            )}
-          </p>
+          <p>Aquí podrás encontrar los horarios de las carreras del F1</p>
+          {readMore2 && (
+            <span id="mas2">
+              <p>Hola, soy Pepito</p>
+              
+            </span>
+          )}
           <button onClick={readMore2} id="botoncito" className="botonleerMas">
-            {showMore2 ? "Leer menos" : "Leer más"}
+          {showMore2 ? "Inicia sesion para ver mas": "Leer mas" }
+       
           </button>
           <nav className="redes__redes" style={{ "--count": 4 }}>
             <ul className="lista__redes">
@@ -242,38 +223,23 @@ function Inicio() {
             </ul>
           </nav>
         </div>
+
+
       </section>
-      <div></div>
-      <section className="escuderias-grid">
-        {traerEscuderia.map((escuderia) => (
-          <div className="escuderia-card" key={escuderia.id_escuderia}>
-            <h3>Equipo</h3>
-            <h1>{escuderia.nombre_escuderia}</h1>
-            <p>Piloto</p>
-            <h4>{escuderia.nombre_piloto}</h4>
-          </div>
-        ))}
-      </section>
-      {/* <section className="comentarios-grid">
-  <form onSubmit={handleSubmit}>
-    <label htmlFor="">Deja tu comentario
-      <textarea
-      value={userComentario}
-      onChange={(e)=> setUserComentario(e.target.value)}
-      />
-    </label>
-    <button type="submit">Enviar</button>
-  </form>
-  <div className="comentarios__lista">
-    {comentarios.map((comentario, index)=>(
-      <div className="comentario" key={index}>
-        <p>{comentario}</p>
-      </div>
-    ))}
-  </div>
-</section> */}
+
+
+
+
+      <Link to="/construccion" className="nav-button">
+        Ir a construccion "(prueba)"
+      </Link> 
+      <Link to="/inicio" className="nav-button">
+        Ir a inicio "(prueba)"
+      </Link>
+      
+
     </>
   );
 }
 
-export default Inicio;
+export default Login;

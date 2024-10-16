@@ -7,8 +7,10 @@ import '../styles/style2.css'
 import Login from '../pages/Login'
 import '../styles/alonso.css'
 import Construccion from '../pages/Construccion'
-import '../styles/apiStyles.css'
 import { UsuarioProvider } from '../contexto/UsuarioContext'
+import Merchan from '../pages/Merchan'
+
+
 
 const Layout = ({ children }) => (
   <>
@@ -22,9 +24,11 @@ createRoot(document.getElementById('root')).render(
     <UsuarioProvider>
     <Suspense fallback={<div>Cargando...</div>}>
       <Routes>
-        <Route path='/' element={<Layout><Login/></Layout>}/>
+        <Route path="/" element={<Login/>}/>
         <Route path="/inicio" element={<Layout><Inicio /></Layout>} />
         <Route path="/construccion" element={<Construccion/>} />
+        <Route path="/merchan" element={<Layout><Merchan /></Layout>} />
+
         
       </Routes>
     </Suspense>
