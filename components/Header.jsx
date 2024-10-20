@@ -10,13 +10,13 @@ function Header() {
           <img src={logo} className="logo" alt="Logo F1" />
           <ul className="lista">
             <li className="elemento__lista">Contacto</li>
-            {/* <li className="elemento__lista" ><Link to={'/'}>Inicio</Link></li> */}
+            <li className="elemento__lista" ><Link to={'/'}>Login</Link></li>
             <li className="elemento__lista" ><Link to={'/construccion'}>Construcción</Link></li>
           
             <a href='./merchan.html' target="_blank"><li className="elemento__lista"><Link to={'/merchan'}>Merchan</Link></li></a>
           </ul>
           <form action="0" method="get" className="elemento__lista">
-            <input type="text" name="nombre" id="nom" className="header_input" placeholder="Buscar" />
+           
           </form>
           <p className="login"></p>
         </div>

@@ -33,6 +33,15 @@ function Inicio() {
 
   return (
     <>
+
+
+    <button className="cambio__oscuro">
+  <span><i className="fas fa-sun"></i></span>
+  <span><i className="fas fa-moon"></i></span> 
+  </button>
+
+
+
       <section className="contenedor">
         <div className="card">
           <img src={mediano} alt="f1" className="card_imagen" />
@@ -244,7 +253,9 @@ function Inicio() {
         </div>
       </section>
       <div></div>
-      {/* <section className="escuderias-grid">
+      <h1 className="tite__card" >Conoce la parrilla</h1>
+      <section className="escuderias-grid">
+        
         {traerEscuderia.map((escuderia) => (
           <div className="escuderia-card" key={escuderia.id_escuderia}>
             <h3>Equipo</h3>
@@ -253,7 +264,7 @@ function Inicio() {
             <h4>{escuderia.nombre_piloto}</h4>
           </div>
         ))}
-      </section> */}
+      </section>
       {/* <section className="comentarios-grid">
   <form onSubmit={handleSubmit}>
     <label htmlFor="">Deja tu comentario

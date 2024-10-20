@@ -9,7 +9,7 @@ import '../styles/alonso.css'
 import Construccion from '../pages/Construccion'
 import { UsuarioProvider } from '../contexto/UsuarioContext'
 import Merchan from '../pages/Merchan'
-
+import '../styles/loginStyle.css'
 
 
 const Layout = ({ children }) => (

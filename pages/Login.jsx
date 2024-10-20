@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-
-
 function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -18,13 +16,12 @@ function Login() {
   };
 
   return (
-    
     <div className="container">
       <div className="row justify-content-center">
         <div className="col-md-6">
           <div className="card mt-5 login-container">
             <div className="card-header">
-              <h1>Iniciar Sesión</h1>
+              <h1> Iniciar Sesión </h1>
             </div>
             <div className="card-body">
               <form
@@ -57,21 +54,23 @@ function Login() {
                     required
                   />
                 </div>
-                <button type="submit" className="btn btn-primary">
+                <button type="submit" className="btn btn-primary formula-uno-style">
                   Iniciar Sesión
                 </button>
               </form>
             </div>
             <div>
-            <li className="elemento__lista" ><Link to={'/construccion'}>Construcción de prueba </Link></li>
-            <li className="elemento__lista" ><Link to={'/inicio'}>inicio de prueba</Link></li>
+              <li className="elemento__lista">
+                <Link to={'/construccion'}>Construcción de prueba </Link>
+              </li>
+              <li className="elemento__lista">
+                <Link to={'/inicio'}>Inicio de prueba</Link>
+              </li>
             </div>
           </div>
         </div>
       </div>
     </div>
-    
-    
   );
 }
 
