@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 
@@ -61,10 +62,16 @@ function Login() {
                 </button>
               </form>
             </div>
+            <div>
+            <li className="elemento__lista" ><Link to={'/construccion'}>Construcción de prueba </Link></li>
+            <li className="elemento__lista" ><Link to={'/inicio'}>inicio de prueba</Link></li>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    
+    
   );
 }
 
