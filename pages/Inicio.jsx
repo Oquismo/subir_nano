@@ -244,7 +244,7 @@ function Inicio() {
         </div>
       </section>
       <div></div>
-      <section className="escuderias-grid">
+      {/* <section className="escuderias-grid">
         {traerEscuderia.map((escuderia) => (
           <div className="escuderia-card" key={escuderia.id_escuderia}>
             <h3>Equipo</h3>
@@ -253,7 +253,7 @@ function Inicio() {
             <h4>{escuderia.nombre_piloto}</h4>
           </div>
         ))}
-      </section>
+      </section> */}
       {/* <section className="comentarios-grid">
   <form onSubmit={handleSubmit}>
     <label htmlFor="">Deja tu comentario
