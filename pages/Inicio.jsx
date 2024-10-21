@@ -10,7 +10,11 @@ function Inicio() {
   const [traerEscuderia, setTaerEscuderia] = useState([]);
   // const [comentarios, setComentarios] = useState([]);
   // aqui va ir la seccion de comentarios donde los usuarios van a poder comentar 
+  const [isFlipped, setIsFlipped] = useState(false);
 
+  const handleFlip = () => {
+    setIsFlipped(!isFlipped);
+  };
   useEffect(() => {
     axios
       .get(import.meta.env.VITE_URL_ESCUDERIA)
@@ -283,6 +287,9 @@ function Inicio() {
     ))}
   </div>
 </section> */}
+<h1>Y YO QUE COÑO PONGO AQUI AHORA </h1>
+
+
     </>
   );
 }

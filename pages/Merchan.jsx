@@ -6,11 +6,10 @@ const MerchandisingPage = () => {
     { id: 1, name: 'Camiseta de F1', price: 25, image: 'camiseta-f1.jpg' },
     { id: 2, name: 'Poster de Escuderías', price: 15, image: 'poster-escuderias.jpg' },
     { id: 3, name: 'Mochila de Piloto', price: 30, image: 'mochila-piloto.jpg' },
-    // Añade más productos aquí
+    
   ];
 
   const addToCart = (productId) => {
-    // Implementa la lógica para agregar al carrito
     console.log(`Agregando producto ${productId} al carrito`);
   };
 

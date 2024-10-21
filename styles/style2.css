@@ -310,8 +310,11 @@ ul:is(:focus-within, :hover) {
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
   }
-}
 
+
+
+}
+/* FIN RESPONSIVE */
 
 
 
