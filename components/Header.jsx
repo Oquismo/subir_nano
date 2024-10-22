@@ -8,12 +8,6 @@ function Header() {
 
 const {usuario} = useContext(UsuarioContext)
 
-
-
-
-
-
-
   return (
     <>
       <header>
@@ -27,7 +21,7 @@ const {usuario} = useContext(UsuarioContext)
 
           <ul className="lista">
             <li className="elemento__lista">Contacto</li>
-            <li className="elemento__lista"><Link to={'/'}> Inicio </Link></li>
+            <li className="elemento__lista"><Link to={'/'}> Cerrar Sesion </Link></li>
             {usuario === null?<li className="elemento__lista"><Link to={'/login'}>Login</Link></li>: <></>}
 
             <li className="elemento__lista">

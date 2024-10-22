@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
-* {
+
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -20,24 +21,5 @@ body {
     padding: 20px;
   }
 
-  .login-container .card-header h1 {
-    font-size: 1.5rem;
-  }
 
-  .login-container .card-body form .form-group label {
-    font-size: 1rem;
-  }
-
-  .login-container .card-body form .form-group input {
-    font-size: 1rem;
-  }
-
-  .login-container .card-body form button {
-    font-size: 1rem;
-  }
-
-  .login-container .elemento__lista {
-    font-size: 1rem;
-  }
 }
-

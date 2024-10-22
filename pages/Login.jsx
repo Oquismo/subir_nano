@@ -25,7 +25,8 @@ function checkearUsuario (e) {
     contrasena: contrasenaRef.current.value
 
   }
-axios.post('https://subir-nano-server.vercel.app/usuarios', objetoAMandar).then(datos=>{
+// axios.post('https://subir-nano-server.vercel.app/usuarios', objetoAMandar).then(datos=>{ IMPORTANTE CAMBIAR A SU SERVIDOR!!!})
+axios.post('http://localhost:3000/usuarios', objetoAMandar).then(datos=>{
 
   if(datos.data.mensajeError == 'usuario no encontrado'){
     setError('El usuario o la contraseña no son correctos')
@@ -43,7 +44,7 @@ axios.post('https://subir-nano-server.vercel.app/usuarios', objetoAMandar).then(
     <>
 
     {error}
-
+    <h1>Iniciar sesión</h1>
     <form action="#" method='post' onSubmit={checkearUsuario}>
       <label htmlFor="usu">Nombre de Usuario: </label>
       <input type="text" name='usuario' id='usu' ref={usuarioRef} /> <br />
