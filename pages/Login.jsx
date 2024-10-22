@@ -1,77 +1,60 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import axios from 'axios'
+import { useRef, useState, useContext} from 'react'
+import { UsuarioContext } from '../contexto/UsuarioContext'
+import { useNavigate } from 'react-router-dom'
 
 function Login() {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
 
-  const handleLogin = () => {
-    if (username === 'admin' && password === 'password') {
-      // Iniciar sesión correctamente
-      console.log('Inició sesión correctamente');
-    } else {
-      // Mostrar mensaje de error
-      console.log('Nombre de usuario o contraseña incorrectos');
-    }
-  };
+const redireccionar = useNavigate()
 
-  return (
-    <div className="container">
-      <div className="row justify-content-center">
-        <div className="col-md-6">
-          <div className="card mt-5 login-container">
-            <div className="card-header">
-              <h1> Iniciar Sesión </h1>
-            </div>
-            <div className="card-body">
-              <form
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  handleLogin();
-                }}
-              >
-                <div className="form-group">
-                  <label htmlFor="username">Nombre de Usuario: </label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="username"
-                    name="username"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                    required
-                  />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="password">Contraseña:</label>
-                  <input
-                    type="password"
-                    className="form-control"
-                    id="password"
-                    name="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                  />
-                </div>
-                <button type="submit" className="btn btn-primary formula-uno-style">
-                  Iniciar Sesión
-                </button>
-              </form>
-            </div>
-            <div>
-              <li className="elemento__lista">
-                <Link to={'/construccion'}>Construcción de prueba </Link>
-              </li>
-              <li className="elemento__lista">
-                <Link to={'/inicio'}>Inicio de prueba</Link>
-              </li>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+const { login} = useContext(UsuarioContext);
+
+const [error, setError] = useState('')
+
+const usuarioRef = useRef()
+
+const contrasenaRef = useRef()
+
+function checkearUsuario (e) {
+  e.preventDefault();
+
+  let objetoAMandar = {
+
+    usuario: usuarioRef.current.value,
+    contrasena: contrasenaRef.current.value
+
+  }
+axios.post('http://localhost:3000/usuarios', objetoAMandar).then(datos=>{
+
+  if(datos.data.mensajeError == 'usuario no encontrado'){
+    setError('El usuario o la contraseña no son correctos')
+  }else{
+    login(datos.data.usuario)
+    redireccionar('/inicio')
+  }
+})
 }
 
-export default Login;
+
+
+
+  return (
+    <>
+
+    {error}
+
+    <form action="#" method='post' onSubmit={checkearUsuario}>
+      <label htmlFor="usu">Nombre de Usuario: </label>
+      <input type="text" name='usuario' id='usu' ref={usuarioRef} /> <br />
+      <label htmlFor="pass">Contraseña </label>
+      <input type="password" name='password' id='pass'  ref={contrasenaRef}/> <br />
+
+      <input type="submit" value='iniciar Sesion' />
+      
+    </form>
+    </>
+  )
+}
+
+export default Login

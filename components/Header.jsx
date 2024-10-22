@@ -1,19 +1,35 @@
 import React from "react";
 import logo from "../img/logo hd.png";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { UsuarioContext } from "../contexto/UsuarioContext";
 
 function Header() {
+
+const {usuario} = useContext(UsuarioContext)
+
+
+
+
+
+
+
   return (
     <>
       <header>
+        <ul>
+          <li>
+          </li>
+        </ul>
+       
         <div className="header">
           <img src={logo} className="logo" alt="Logo F1" />
 
           <ul className="lista">
             <li className="elemento__lista">Contacto</li>
-            <li className="elemento__lista">
-              <Link to={"/"}>Login</Link>
-            </li>
+            <li className="elemento__lista"><Link to={'/'}> Inicio </Link></li>
+            {usuario === null?<li className="elemento__lista"><Link to={'/login'}>Login</Link></li>: <></>}
+
             <li className="elemento__lista">
               <Link to={"/construccion"}>Construcción</Link>
             </li>

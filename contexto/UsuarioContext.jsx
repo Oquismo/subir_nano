@@ -1,6 +1,6 @@
-import { useState, createContext, } from "react";
+import { useState, createContext } from "react";
 
-const usuarioContext = createContext();
+export const UsuarioContext = createContext();
 
 const UsuarioProvider = ({ children }) => {
 
@@ -9,23 +9,18 @@ const UsuarioProvider = ({ children }) => {
     const login = (datosUsu) => {
         localStorage.setItem('usuario', datosUsu);
         setUsuario(datosUsu);
-
-        
     }
 
     const logout = () => {
-
         localStorage.removeItem('usuario');
         setUsuario(null);
     }
 
-        return(
-            <usuarioContext.Provider value={{ usuario, login, logout }}>
-                {children}
-            </usuarioContext.Provider>
-
-        )
+    return(
+        <UsuarioContext.Provider value={{ usuario, login, logout }}>
+            {children}
+        </UsuarioContext.Provider>
+    )
 }
 
-export { usuarioContext, UsuarioProvider };
-
+export { UsuarioProvider };
