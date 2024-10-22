@@ -33,7 +33,7 @@ axios.post('http://localhost:3000/usuarios', objetoAMandar).then(datos=>{
     setError('El usuario o la contraseña no son correctos')
   }else{
     login(datos.data.usuario)
-    redireccionar('/inicio')
+    redireccionar('/Inicio')
   }
 })
 }
