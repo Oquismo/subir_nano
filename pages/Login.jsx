@@ -51,7 +51,7 @@ axios.post('http://localhost:3000/usuarios', objetoAMandar).then(datos=>{
       <label htmlFor="pass">Contraseña </label>
       <input type="password" name='password' id='pass'  ref={contrasenaRef}/> <br />
 
-      <input type="submit" value='iniciar Sesion' />
+      <input type="submit" value=' iniciar Sesion ' />
       
     </form>
     </>
