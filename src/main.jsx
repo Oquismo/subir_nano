@@ -25,7 +25,7 @@ createRoot(document.getElementById('root')).render(
     <Suspense fallback={<div>Cargando...</div>}>
       <Routes>
         <Route path="/" element={<Login/>}/>
-        <Route path="/Inicio" element={<Layout><Inicio /></Layout>} />
+        <Route path="/inicio" element={<Layout><Inicio /></Layout>} />
         <Route path="/construccion" element={<Construccion/>} />
         <Route path="/merchan" element={<Layout><Merchan /></Layout>} />
 

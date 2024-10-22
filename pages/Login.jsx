@@ -33,7 +33,7 @@ axios.post('https://subir-nano-server.vercel.app/usuarios', objetoAMandar).then(
     setError('El usuario o la contraseña no son correctos')
   }else{
     login(datos.data.usuario)
-    redireccionar('/Inicio')
+    redireccionar('/inicio')
   }
 })
 }
