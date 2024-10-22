@@ -4,6 +4,7 @@ import { useRef, useState, useContext} from 'react'
 import { UsuarioContext } from '../contexto/UsuarioContext'
 import { useNavigate } from 'react-router-dom'
 
+
 function Login() {
 
 const redireccionar = useNavigate()
@@ -43,7 +44,6 @@ axios.post('http://localhost:3000/usuarios', objetoAMandar).then(datos=>{
   return (
     <>
 
-    {error}
     <h1>Iniciar sesión</h1>
     <form action="#" method='post' onSubmit={checkearUsuario}>
       <label htmlFor="usu">Nombre de Usuario: </label>
@@ -51,7 +51,8 @@ axios.post('http://localhost:3000/usuarios', objetoAMandar).then(datos=>{
       <label htmlFor="pass">Contraseña </label>
       <input type="password" name='password' id='pass'  ref={contrasenaRef}/> <br />
 
-      <input type="submit" value=' iniciar Sesion ' />
+      <input type="submit" value=' iniciar Sesion ' /> <br />
+      {error}
       
     </form>
     </>
