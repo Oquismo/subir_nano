@@ -14,6 +14,8 @@ import RutaPrivada from './RutaPrivada'
 import LogOut from '../pages/LogOut'
 import InicioInvitado from '../pages/InicioInvitado'
 import HeaderInvitado from '../components/HeaderInvitado'
+import HeaderOtros from '../components/HeaderOtros'
+import '../styles/merchan.css'
 
 
 
@@ -31,6 +33,13 @@ const LayoutInvitado = ({ children }) => (
   </>
 )
 
+const LayoutAtras= ({ children }) => (
+  <>
+    <HeaderOtros />
+    {children}
+  </>
+)
+
 
 createRoot(document.getElementById('root')).render(
   <Router>
@@ -42,7 +51,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/inicioInvitado" element={<LayoutInvitado><InicioInvitado/></LayoutInvitado>}/> //prueba borrar linea 
         <Route path="/inicio" element={<Layout><RutaPrivada ComponenteQueQuieroPintar={<Inicio/>}/></Layout>}/>
         <Route path="/construccion" element={<Construccion/>} />
-        <Route path="/merchan" element={<Layout><Merchan /></Layout>} />
+        <Route path="/merchan" element={<LayoutAtras><Merchan /></LayoutAtras>} />
 
         
       </Routes>

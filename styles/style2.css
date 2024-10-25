@@ -183,9 +183,11 @@ ul:is(:focus-within, :hover) {
 }
 
 .tite__card {
-  transition: color 0.5s ease, background 0.5s ease;
   position: relative;
   overflow: hidden;
+  border-radius: 6rem;
+  transition: transform 2.5s ease-out;
+  
 }
 
 .tite__card::before {
@@ -195,14 +197,20 @@ ul:is(:focus-within, :hover) {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, transparent, red);
-  transform: translateX(-100%);
-  transition: transform 0.5s ease;
+  transform: translateX(0);
+  transition: transform 2.5s ease-out;
 }
 
 .tite__card:hover::before {
-  transform: translateX(0);
+  background-image: url('../img/lineademeta.jpg');
+   background-position: 10px, 1px, 10px, 1px ;
+   transform: translateX(0);
+   transition: transform 2.5s ease-out;
 }
+.tite__card:not(:hover)::before {
+  transform: translateX(-100%);
+}
+
 .escuderias-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));

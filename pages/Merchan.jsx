@@ -1,33 +1,26 @@
-import React from 'react';
+import React from 'react'
+import '../styles/merchan.css'
+import producto from '../img/historia.jpg'
+import prodcuto2 from '../img/formula1.jpg'
 
-
-const MerchandisingPage = () => {
-  const products = [
-    { id: 1, name: 'Camiseta de F1', price: 25, image: 'camiseta-f1.jpg' },
-    { id: 2, name: 'Poster de Escuderías', price: 15, image: 'poster-escuderias.jpg' },
-    { id: 3, name: 'Mochila de Piloto', price: 30, image: 'mochila-piloto.jpg' },
-    
-  ];
-
-  const addToCart = (productId) => {
-    console.log(`Agregando producto ${productId} al carrito`);
-  };
-
+function Merchan() {
   return (
-    <div className="merchandising-page">
-      <h1>Nuestros Productos</h1>
-      <div className="product-list">
-        {products.map((product) => (
-          <div className="product-card" key={product.id}>
-            <img src={product.image} alt={product.name} />
-            <h2>{product.name}</h2>
-            <p>Precio: ${product.price}</p>
-            <button onClick={() => addToCart(product.id)}>Agregar al carrito</button>
-          </div>
-        ))}
+    <div className="merchan-page">
+      <div className="construction-message animate__animated animate__flash">
+        En construcción
+      </div>
+
+      <div className="products">
+        <div className="product">
+          <img src={producto} alt="" />
+        </div>
+        <div className="product">
+          <img src={prodcuto2} alt="Product 2" />
+        </div>
+        {/* Add more products as needed */}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default MerchandisingPage;
+export default Merchan
