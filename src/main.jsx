@@ -10,6 +10,11 @@ import Construccion from '../pages/Construccion'
 import { UsuarioProvider } from '../contexto/UsuarioContext'
 import Merchan from '../pages/Merchan'
 import '../styles/loginStyle.css'
+import RutaPrivada from './RutaPrivada'
+import LogOut from '../pages/LogOut'
+import InicioInvitado from '../pages/InicioInvitado'
+import HeaderInvitado from '../components/HeaderInvitado'
+
 
 
 const Layout = ({ children }) => (
@@ -19,13 +24,23 @@ const Layout = ({ children }) => (
   </>
 )
 
+const LayoutInvitado = ({ children }) => (
+  <>
+    <HeaderInvitado />
+    {children}
+  </>
+)
+
+
 createRoot(document.getElementById('root')).render(
   <Router>
     <UsuarioProvider>
     <Suspense fallback={<div>Cargando...</div>}>
       <Routes>
         <Route path="/" element={<Login/>}/>
-        <Route path="/inicio" element={<Layout><Inicio /></Layout>} />
+        <Route path="/logout" element={<RutaPrivada ComponenteQueQuieroPintar={<LogOut/>}/>}/>
+        <Route path="/inicioInvitado" element={<LayoutInvitado><InicioInvitado/></LayoutInvitado>}/> //prueba borrar linea 
+        <Route path="/inicio" element={<Layout><RutaPrivada ComponenteQueQuieroPintar={<Inicio/>}/></Layout>}/>
         <Route path="/construccion" element={<Construccion/>} />
         <Route path="/merchan" element={<Layout><Merchan /></Layout>} />
 

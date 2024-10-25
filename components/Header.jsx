@@ -10,6 +10,7 @@ const {usuario} = useContext(UsuarioContext)
 
   return (
     <>
+    
       <header>
         <ul>
           <li>
@@ -21,8 +22,13 @@ const {usuario} = useContext(UsuarioContext)
 
           <ul className="lista">
             <li className="elemento__lista">Contacto</li>
-            <li className="elemento__lista"><Link to={'/'}> Cerrar Sesion </Link></li>
-            {usuario === null?<li className="elemento__lista"><Link to={'/login'}>Login</Link></li>: <></>}
+            {/* <li className="elemento__lista"><Link to={'/logout'}> Cerrar Sesion </Link></li> */}
+            {usuario !== null && (
+          <li className="elemento__lista">
+          <Link to={'/logout'}> Cerrar Sesión </Link>
+          </li>
+            )}
+            {usuario === null?<li className="elemento__lista"><Link to={'/'}>Login</Link></li>: <></>}
 
             <li className="elemento__lista">
               <Link to={"/construccion"}>Construcción</Link>
@@ -31,13 +37,18 @@ const {usuario} = useContext(UsuarioContext)
             <a href="./merchan.html" target="_blank">
               <li className="elemento__lista">
                 <Link to={"/merchan"}>Merchan</Link>
+          
               </li>
+              
             </a>
+            
           </ul>
           <form action="0" method="get" className="elemento__lista"></form>
           <p className="login"></p>
+          <h1 className="elemento__lista">Hola de nuevo ! <br /> {usuario} </h1>
         </div>
         <div
+        
           style={{
             left: 0,
             width: "20%",

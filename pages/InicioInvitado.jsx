@@ -1,29 +1,11 @@
 import React, { useState, useRef, useContext } from "react";
-import { useEffect } from "react";
 import mediano from "../img/mediano.jpeg";
 import horarios from "../img/horarios.jpeg";
-import axios from "axios";
+
 
 function Inicio() {
   const [showMore, setShowMore] = useState(false);
   const [showMore2, setShowMore2] = useState(false);
-  const [traerEscuderia, setTaerEscuderia] = useState([]);
-
- 
-
-
-  useEffect(() => {
-    axios
-      .get(import.meta.env.VITE_URL_ESCUDERIA)
-      .then((resultados) => {
-        setTaerEscuderia(resultados.data);
-      })
-      .catch((error) => {
-        console.log(error);
-        console.error("Error al obtener los datos:", error);
-      });
-  }, []);
-
   const readMore = () => {
     setShowMore(!showMore);
   };
@@ -34,15 +16,6 @@ function Inicio() {
 
   return (
     <>
-
-
-    <button className="cambio__oscuro">
-  <span><i className="fas fa-sun"></i></span>
-  <span><i className="fas fa-moon"></i></span> 
-  </button>
-
-
-
       <section className="contenedor">
         <div className="card">
           <img src={mediano} alt="f1" className="card_imagen" />
@@ -50,17 +23,14 @@ function Inicio() {
             Aston Martin ya prepara mejoras,
             {showMore ? (
               <>
-                el equipo de Silverstone trabaja a contrareloj para mejorar un
-                coche que a día de hoy resta mucho de lo que fue el año pasado.
-                <br /> En sus declaraciones el piloto asturiano ha anunciado que
-                se encuentra muy motivado y que van en buena dirección. <br />
+          
               </>
             ) : (
               <span id="puntos">...</span>
             )}
           </p>
           <button onClick={readMore} id="botoncito" className="botonleerMas">
-            {showMore ? "Leer menos" : "Leer más"}
+            {showMore ? "Inicia sesion para ver" : "Leer más"}
           </button>
           <nav className="redes__redes" style={{ "--count": 4 }}>
             <ul className="lista__redes">
@@ -160,12 +130,12 @@ function Inicio() {
             {showMore2 && (
               <>
                 <br />
-                <p>joskdhd</p>
+                <p></p>
               </>
             )}
           </p>
           <button onClick={readMore2} id="botoncito" className="botonleerMas">
-            {showMore2 ? "Leer menos" : "Leer más"}
+            {showMore2 ? "Inicia sesion para ver" : "Leer más"}
           </button>
           <nav className="redes__redes" style={{ "--count": 4 }}>
             <ul className="lista__redes">
@@ -255,16 +225,11 @@ function Inicio() {
       </section>
       <div></div>
       <h1 className="tite__card" >Conoce la parrilla</h1>
-      <section className="escuderias-grid">
-        {traerEscuderia.map((escuderia) => (
-          <div className="escuderia-card" key={escuderia.id_escuderia}>
-            <h3>Equipo</h3>
-            <h1>{escuderia.nombre_escuderia}</h1>
-            <p>Piloto</p>
-            <h4>{escuderia.nombre_piloto}</h4>
-          </div>
-        ))}
-      </section>
+      <h4 className="title__card" > inicia sesion para ver mas </h4>
+
+ 
+
+
     </>
   );
 }

@@ -23,7 +23,12 @@ html {
   display: flex;
   align-items: center;
 }
-.elemento__lista {
+.headerInvitado{
+  display: flex;
+  align-items: center;
+}
+.elemento__lista,
+.elemento__listaInvitado{
   margin: 2rem;
   font-size: 1.3rem;
   cursor: pointer;
