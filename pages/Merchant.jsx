@@ -2,12 +2,13 @@ import React from 'react'
 import { useContext } from "react";
 import { UsuarioContext } from '../contexto/UsuarioContext';
 import '../styles/merchan.css'
-// import gorra  from '../img/camisetaA.avif'
+import gorra  from '../img/GorraAlonso.jpg'
+import camisetaB from '../img/camisetanormal.jpg'
+import camisetaA from '../img/camisetaAlonso.jpg'
+import gorraRB from '../img/gorraRB.jpg'
+import camisetaRB from '../img/CamisetaRB.jpg'
+import sudadera from '../img/sudaderaRB.jpg'
 
-// import camisetaA from '../img/gorraG.avif'
-// import camisetaRB from '../img/CamisetaRB.avif'
-// import gorraRB from '../img/gorraRB.avif'
-import sudadera from '../img/sudaderaRB.webp'
 
 function Merchant() {
   const {usuario} = useContext(UsuarioContext)

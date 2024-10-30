@@ -11,9 +11,7 @@ function Inicio() {
   const [showMore2, setShowMore2] = useState(false);
   const [traerEscuderia, setTaerEscuderia] = useState([]);
 
-  const [traerCalendario, setTaerCalendario] = useState([]);
 
- 
 
 
   useEffect(() => {
@@ -28,24 +26,6 @@ function Inicio() {
       });
   }, []);
 
-
-
-
-  useEffect(() => {
-    axios
-      .get(import.meta.env.VITE_URL_CALENDARIO)
-      .then((resultados) => {
-        setTaerCalendario(resultados.data);
-      })
-      .catch((error) => {
-        console.log(error);
-        console.error("Error al obtener los datos:", error);
-      });
-  }, []);
-
-
-
-
   const readMore = () => {
     setShowMore(!showMore);
   };
@@ -56,15 +36,6 @@ function Inicio() {
 
   return (
     <>
-
-
-    <button className="cambio__oscuro">
-  <span><i className="fas fa-sun"></i></span>
-  <span><i className="fas fa-moon"></i></span> 
-  </button>
-
-
-
       <section className="contenedor">
         <div className="card">
           <img src={mediano} alt="f1" className="card_imagen" />
