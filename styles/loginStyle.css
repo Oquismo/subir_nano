@@ -7,6 +7,8 @@
   font-family: "Quicksand", sans-serif;
 }
 body {
+  color: white;
+  background-color: #212529;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,12 +26,15 @@ body {
 }
 
 .logStyle label {
+
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
 }
 .logStyle input[type="text"],
 .logStyle input[type="password"] {
+  font-weight: 400;
+  color: black;
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
@@ -42,7 +47,7 @@ body {
   border: none;
   border-radius: 5px;
   background-color: #4CAF50;
-  color: #212529;
+  color: #ffffff;
   font-size: 16px;
   cursor: pointer;
 }
@@ -67,6 +72,30 @@ body {
 .logStyle .error {
   color: red;
   margin-top: 10px;
+}
+.InviteButton {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.InviteButton:hover {
+  background-color: #45a049;
+  font-weight: bold;
+}
+
+.InviteButton:focus {
+  outline: none;
+  font-weight: bold;
+}
+
+.InviteButton:active {
+  background-color: #3e8e41;
 }
 
 @media (max-width: 780px) {

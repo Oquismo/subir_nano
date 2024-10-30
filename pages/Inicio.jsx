@@ -3,11 +3,15 @@ import { useEffect } from "react";
 import mediano from "../img/mediano.jpeg";
 import horarios from "../img/horarios.jpeg";
 import axios from "axios";
+import Footer from "../components/Footer";
+
 
 function Inicio() {
   const [showMore, setShowMore] = useState(false);
   const [showMore2, setShowMore2] = useState(false);
   const [traerEscuderia, setTaerEscuderia] = useState([]);
+
+  const [traerCalendario, setTaerCalendario] = useState([]);
 
  
 
@@ -23,6 +27,24 @@ function Inicio() {
         console.error("Error al obtener los datos:", error);
       });
   }, []);
+
+
+
+
+  useEffect(() => {
+    axios
+      .get(import.meta.env.VITE_URL_CALENDARIO)
+      .then((resultados) => {
+        setTaerCalendario(resultados.data);
+      })
+      .catch((error) => {
+        console.log(error);
+        console.error("Error al obtener los datos:", error);
+      });
+  }, []);
+
+
+
 
   const readMore = () => {
     setShowMore(!showMore);
@@ -265,6 +287,8 @@ function Inicio() {
           </div>
         ))}
       </section>
+      <Footer/>
+
     </>
   );
 }

@@ -42,31 +42,7 @@ const {usuario} = useContext(UsuarioContext)
           <p className="login"></p>
           <h1 className="elemento__lista">Hola de nuevo ! <br /> {usuario} </h1>
         </div>
-        <div
         
-          style={{
-            left: 0,
-            width: "20%",
-            height: 0,
-            position: "relative",
-            paddingBottom: "5%",
-            margin: "0 auto",
-          }}
-        >
-          <iframe
-            src="https://www.tickcounter.com/widget/countdown/5984312"
-            style={{
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-              position: "absolute",
-              border: 0,
-              overflow: "hidden",
-            }}
-            title="GP 2025"
-          ></iframe>
-        </div>
       </header>
     </>
   );
