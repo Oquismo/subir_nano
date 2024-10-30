@@ -8,6 +8,7 @@ import camisetaA from '../img/CamisetaAlonso.jpg'
 import gorraRB from '../img/GorraRB.jpg'
 import camisetaRB from '../img/CamisetaRB.jpg'
 import sudadera from '../img/sudaderaRB.jpg'
+import Footer from '../components/Footer';
 
 
 function Merchant() {
@@ -76,9 +77,7 @@ function Merchant() {
         </div>
       </div>
     </div>
-
-
-
+<Footer/>
     </>
   )
 }
