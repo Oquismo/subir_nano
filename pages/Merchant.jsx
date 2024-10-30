@@ -5,7 +5,7 @@ import '../styles/merchan.css'
 import gorra  from '../img/GorraAlonso.jpg'
 import camisetaB from '../img/Camisetanormal.jpg'
 import camisetaA from '../img/CamisetaAlonso.jpg'
-import gorraRB from '../img/gorraRB.jpg'
+import gorraRB from '../img/GorraRB.jpg'
 import camisetaRB from '../img/CamisetaRB.jpg'
 import sudadera from '../img/sudaderaRB.jpg'
 
