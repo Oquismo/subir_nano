@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { UsuarioContext } from '../contexto/UsuarioContext';
 import '../styles/merchan.css'
 import gorra  from '../img/camisetaA.avif'
-import camisetaB from '../img/camisetaAaston.png'
+
 import camisetaA from '../img/gorraG.avif'
 import camisetaRB from '../img/CamisetaRB.avif'
 import gorraRB from '../img/gorraRB.avif'
