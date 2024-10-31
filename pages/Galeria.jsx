@@ -4,7 +4,6 @@ import carrousel3 from '../img/carrousel3.jpg'
 import carrousel4 from '../img/carrousel4.jpg'
 import carrousel5 from '../img/carrousel5.jpg'
 
-import carrousel2 from '../img/imagenCarrousel2.jpg';
 import carrousel6 from '../img/carrousel6.jpg'
 import carrousel7 from '../img/carrousel7.jpg'
 import carrousel8 from '../img/carrousel8.jpg'
@@ -18,7 +17,7 @@ function MyCarousel() {
 
       {
         id: 'item-2',
-        renderItem: <img className='imagenCarrousel' src={carrousel2} alt="" />
+        renderItem: <img className='imagenCarrousel' src={carrousel4} alt="" />
       },
       {
         id: 'item-3',
