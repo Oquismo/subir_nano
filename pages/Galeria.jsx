@@ -3,7 +3,7 @@ import { useSpringCarousel } from 'react-spring-carousel';
 import carrousel3 from '../img/carrousel3.jpg'
 import carrousel4 from '../img/carrousel4.jpg'
 import carrousel5 from '../img/carrousel5.jpg'
-import carrousel1 from '../img/imagenCarrousel1.jpg';
+
 import carrousel2 from '../img/imagenCarrousel2.jpg';
 import carrousel6 from '../img/carrousel6.jpg'
 import carrousel7 from '../img/carrousel7.jpg'
@@ -15,10 +15,7 @@ import carrousel9 from '../img/carrousel9.jpg'
 function MyCarousel() {
   const { carouselFragment, slideToPrevItem, slideToNextItem } = useSpringCarousel({
     items: [
-      {
-        id: 'item-1',
-        renderItem: <img className='imagenCarrousel' src={carrousel1} alt="" />
-      },
+
       {
         id: 'item-2',
         renderItem: <img className='imagenCarrousel' src={carrousel2} alt="" />
