@@ -21,7 +21,7 @@ const contrasenaRef = useRef()
 
 function checkearUsuario (e) {
   e.preventDefault();
-
+// Esta funcion comprueba que el usuario y contraseña sean correctos, si no lo son mandara un mensaje indicandolo
   let objetoAMandar = {
 
     usuario: usuarioRef.current.value,
@@ -29,8 +29,8 @@ function checkearUsuario (e) {
 
   }
 
-  // http://localhost:3000/usuarios
-// axios.post('https://subir-nano-server.vercel.app/usuarios', objetoAMandar).then(datos=>{ IMPORTANTE CAMBIAR A SU SERVIDOR!!!})
+//http://localhost:3000/usuarios //Local
+//https://subir-nano-server.vercel.app/usuarios //Red
 
 
 axios.post('https://subir-nano-server.vercel.app/usuarios', objetoAMandar).then(datos=>{
@@ -50,7 +50,7 @@ axios.post('https://subir-nano-server.vercel.app/usuarios', objetoAMandar).then(
   return (
     <>
 
-{/* <img  src={logo} className="logo" alt="Logo F1" /> */}
+
     <h1 >Iniciar sesión</h1>
     <form className='logStyle' action="#" method='post' onSubmit={checkearUsuario}>
       <label htmlFor="usu"> Nombre de Usuario:  </label>
@@ -66,5 +66,5 @@ axios.post('https://subir-nano-server.vercel.app/usuarios', objetoAMandar).then(
     </>
   )
 }
-
+// Login totalmente funcional con opcion de entrar como invitado
 export default Login

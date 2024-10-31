@@ -54,7 +54,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/logout" element={<RutaPrivada ComponenteQueQuieroPintar={<LogOut/>}/>}/>
         <Route path="/inicioInvitado" element={<LayoutInvitado><InicioInvitado/></LayoutInvitado>}/> //prueba borrar linea 
         <Route path="/inicio" element={<Layout><RutaPrivada ComponenteQueQuieroPintar={<Inicio/>}/></Layout>}/>
-        <Route path="/galeria" element={<Galeria/>} />
+        <Route path="/galeria" element={<LayoutAtras><Galeria/></LayoutAtras>} />
         <Route path="/merchan" element={<LayoutAtras><Merchant /></LayoutAtras>} />
       </Routes>
     </Suspense>

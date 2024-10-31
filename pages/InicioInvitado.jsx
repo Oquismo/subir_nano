@@ -235,5 +235,8 @@ function Inicio() {
     </>
   );
 }
-
+// Este inicio de invitado es el mismo que el anterior pero retirando algunas funciones por lo que es necesario iniciar sesion para verlas
+//  las funciones retiradas como podreis observar son que al darle a los botones de noticias y calendario te 
+// pide que inicies sesion para poder verlos.
+// Tambien oculta los datos de pilotos y escuderias y algunas funciones del header 
 export default Inicio;

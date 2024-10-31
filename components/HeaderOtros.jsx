@@ -32,7 +32,7 @@ const {usuario} = useContext(UsuarioContext)
             {usuario === null?<li className="elemento__lista"><Link to={'/'}>Login</Link></li>: <></>}
 
             <li className="elemento__lista">
-              <Link to={"/construccion"}>Construcción</Link>
+              <Link to={"/galeria"}>Galeria</Link>
             </li>
 
           
@@ -51,3 +51,5 @@ const {usuario} = useContext(UsuarioContext)
 }
 
 export default Header;
+
+// Header hecho para la ruta merch en el que se añade la opcion de volver atras

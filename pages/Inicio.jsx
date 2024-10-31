@@ -5,14 +5,10 @@ import horarios from "../img/horarios.jpeg";
 import axios from "axios";
 import Footer from "../components/Footer";
 
-
 function Inicio() {
   const [showMore, setShowMore] = useState(false);
   const [showMore2, setShowMore2] = useState(false);
   const [traerEscuderia, setTaerEscuderia] = useState([]);
-
-
-
 
   useEffect(() => {
     axios
@@ -25,7 +21,7 @@ function Inicio() {
         console.error("Error al obtener los datos:", error);
       });
   }, []);
-
+  // Funcion para trer las escuderias que se pintan mas abajo
   const readMore = () => {
     setShowMore(!showMore);
   };
@@ -33,21 +29,23 @@ function Inicio() {
   const readMore2 = () => {
     setShowMore2(!showMore2);
   };
-
+  // Funcion para darle funcion a los botones leer mas
   return (
     <>
       <section className="contenedor">
         <div className="card">
           <img src={mediano} alt="f1" className="card_imagen" />
           <p id="inicio__texto">
+            <h4>Noticias</h4>
             Aston Martin ya prepara mejoras,
             {showMore ? (
               <>
                 el equipo de Silverstone trabaja a contrareloj para mejorar un
                 coche que a día de hoy resta mucho de lo que fue el año pasado.
                 <br /> En sus declaraciones el piloto asturiano ha anunciado que
-                se encuentra muy motivado y que van en buena dirección. <br />
+                se encuentra muy motivado y que van "en buena dirección". <br />
               </>
+              // Aqui esta el desplegable para las noticias 
             ) : (
               <span id="puntos">...</span>
             )}
@@ -135,6 +133,7 @@ function Inicio() {
                     </svg>
                     Horarios
                   </span>
+                  {/* Aqui termina el deslizable de redes  */}
                 </a>
               </li>
             </ul>
@@ -152,9 +151,31 @@ function Inicio() {
             Aquí podrás encontrar los horarios de las carreras del F1
             {showMore2 && (
               <>
+                <br /> <br />
+                <p>
+                  -Gran Premio de Melbourne <br />
+                  Circuito: Albert Park, Australia Fecha: 10 de marzo de 2024
+                  <br />
+                </p>
+                <p>
+                  -Gran Premio de Shanghái <br />
+                  Circuito: Circuito Internacional de Shanghái, China <br />{" "}
+                  Fecha: 24 de marzo de 2024 <br />
+                </p>
+                <p>
+                  -Gran Premio de Mónaco <br />
+                  Circuito: Circuito de Mónaco, Montecarlo <br />
+                  Fecha: 14 de abril de 2024
+                </p>
+                <p>
+                  -Gran Premio de Silverstone <br />
+                  Circuito: Silverstone, Reino Unido <br />
+                  Fecha: 28 de abril de 2024
+                </p>{" "}
                 <br />
-                <p>joskdhd</p>
+                
               </>
+              //Aqui esta el desplegable para el calendario de carreras
             )}
           </p>
           <button onClick={readMore2} id="botoncito" className="botonleerMas">
@@ -240,14 +261,17 @@ function Inicio() {
                     </svg>
                     Horarios
                   </span>
+                  {/* Aqui termina el deslizable de redes  */}
                 </a>
               </li>
+            
             </ul>
           </nav>
         </div>
+      
       </section>
-      <div></div>
-      <h1 className="tite__card" >Conoce la parrilla</h1>
+  
+      <h1 className="tite__card">Conoce la parrilla</h1>
       <section className="escuderias-grid">
         {traerEscuderia.map((escuderia) => (
           <div className="escuderia-card" key={escuderia.id_escuderia}>
@@ -256,10 +280,10 @@ function Inicio() {
             <p>Piloto</p>
             <h4>{escuderia.nombre_piloto}</h4>
           </div>
+          // Aqui se pintan los datos que nos trarmos de las escuderias y los pilotos
         ))}
       </section>
-      <Footer/>
-
+      <Footer />
     </>
   );
 }

@@ -49,7 +49,7 @@ function Merchant() {
         </div>
       </div>
     </div>
-{/* tienda 2 */}
+
     <div className='product-section'>
       <div className='product-flex'>
         <div className='product-itemRB'>
@@ -79,6 +79,7 @@ function Merchant() {
       </div>
     </div>
 <Footer/>
+{/* Pagina de Merchant donde se pueden comprar productos, no tiene carrito */}
     </>
   )
 }

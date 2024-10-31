@@ -36,9 +36,20 @@
 }
 
 .imagenCarrousel {
+    padding: 1rem;
+    margin: 1rem;
     height: auto;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
-    
+.Gallery-title {
+    margin-right: 6rem;
+    text-align: center;
+    color: #ff0000; 
+    transition: color 0.3s ease-in-out;
+}
+.Gallery-title:hover{
+    color: #ffffff;
+}
+
   
   
