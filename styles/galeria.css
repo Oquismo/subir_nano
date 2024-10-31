@@ -1,0 +1,44 @@
+
+.container {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.galeria {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.Adelante {
+    width: 50%;
+    max-width: 700px;
+}
+
+.btnAdelante {
+    margin: 1rem;
+    background-color: rgb(51, 255, 0);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.btnAtras {
+    background-color: brown;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.imagenCarrousel {
+    height: auto;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+    
+  
+  

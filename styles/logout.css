@@ -1,0 +1,38 @@
+.cerrar_sesion {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.cerrar_sesion:hover {
+  background-color: #45a049;
+}
+
+.cerrar_sesion:focus {
+  outline: none;
+}
+
+.cerrar_sesion:active {
+  background-color: #3e8e41;
+}
+
+.cerrar_sesion:nth-of-type(1) {
+  background-color: #ff0000;
+}
+
+.cerrar_sesion:nth-of-type(1):hover {
+  background-color: #cc0000;
+}
+
+.cerrar_sesion:nth-of-type(1):focus {
+  outline: none;
+}
+
+.cerrar_sesion:nth-of-type(1):active {
+  background-color: #b30000;
+}
+

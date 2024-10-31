@@ -1,6 +1,7 @@
 import React, { useState, useRef, useContext } from "react";
 import mediano from "../img/mediano.jpeg";
 import horarios from "../img/horarios.jpeg";
+import Footer from "../components/Footer";
 
 
 function Inicio() {
@@ -226,6 +227,7 @@ function Inicio() {
       <div></div>
       <h1 className="tite__card" >Conoce la parrilla</h1>
       <h4 className="title__card" > inicia sesion para ver mas </h4>
+      <Footer/>
 
  
 

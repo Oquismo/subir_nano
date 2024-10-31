@@ -26,7 +26,7 @@ const {usuario} = useContext(UsuarioContext)
           </li>
             )}
             <li className="elemento__lista">
-              <Link to={"/construccion"}>Construcción</Link>
+              <Link to={"/galeria"}>Galeria</Link>
             </li>
 
           

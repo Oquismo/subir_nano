@@ -5,9 +5,9 @@ import Header from '../components/Header'
 import Inicio from '../pages/Inicio'
 import '../styles/style2.css'
 import Login from '../pages/Login'
-import '../styles/alonso.css'
+import '../styles/logout.css'
 import Merchant from '../pages/Merchant'
-import Construccion from '../pages/Construccion'
+import Galeria from '../pages/Galeria'
 import { UsuarioProvider } from '../contexto/UsuarioContext'
 import '../styles/loginStyle.css'
 import RutaPrivada from './RutaPrivada'
@@ -17,6 +17,9 @@ import HeaderInvitado from '../components/HeaderInvitado'
 import HeaderOtros from '../components/HeaderOtros'
 import '../styles/merchan.css'
 import '../styles/footer.css'
+import '../styles/galeria.css'
+
+
 
 
 
@@ -51,7 +54,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/logout" element={<RutaPrivada ComponenteQueQuieroPintar={<LogOut/>}/>}/>
         <Route path="/inicioInvitado" element={<LayoutInvitado><InicioInvitado/></LayoutInvitado>}/> //prueba borrar linea 
         <Route path="/inicio" element={<Layout><RutaPrivada ComponenteQueQuieroPintar={<Inicio/>}/></Layout>}/>
-        <Route path="/construccion" element={<Construccion/>} />
+        <Route path="/galeria" element={<Galeria/>} />
         <Route path="/merchan" element={<LayoutAtras><Merchant /></LayoutAtras>} />
       </Routes>
     </Suspense>
