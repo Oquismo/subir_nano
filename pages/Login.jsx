@@ -29,8 +29,7 @@ function checkearUsuario (e) {
 
   }
 
-//http://localhost:3000/usuarios //Local
-//https://subir-nano-server.vercel.app/usuarios //Red
+
 
 
 axios.post('https://subir-nano-server.vercel.app/usuarios', objetoAMandar).then(datos=>{

@@ -37,3 +37,5 @@ const {usuario} = useContext(UsuarioContext)
 }
 
 export default Header;
+
+// Header para la opcion entrar como invitado en el que no se llegan a mostrar todas las rutas 

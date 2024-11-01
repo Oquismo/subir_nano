@@ -1,6 +1,6 @@
 /*/----------------------------------------------------- 
 /* ESTE CSS LE DA ESTILO A LAS PAGINAS DE INICIO TANTO LA PRINCIPAL COMO LA DE INVITADO*/
-/* ------------------------------------------------------------------ */ 
+/* ------------------------------------------------------------------ */
 @import url(https://unpkg.com/open-props/open-props.min.css);
 @import url(https://unpkg.com/open-props/normalize.min.css);
 /* estos dos enlaces son ara añadir un modo oscuro */
@@ -23,12 +23,12 @@ html {
   display: flex;
   align-items: center;
 }
-.headerInvitado{
+.headerInvitado {
   display: flex;
   align-items: center;
 }
 .elemento__lista,
-.elemento__listaInvitado{
+.elemento__listaInvitado {
   margin: 2rem;
   font-size: 1.3rem;
   cursor: pointer;
@@ -187,7 +187,6 @@ ul:is(:focus-within, :hover) {
   overflow: hidden;
   border-radius: 6rem;
   transition: transform 2.5s ease-out;
-  
 }
 
 .tite__card::before {
@@ -202,10 +201,10 @@ ul:is(:focus-within, :hover) {
 }
 
 .tite__card:hover::before {
-  background-image: url('../img/lineademeta.jpg');
-   background-position: 10px, 1px, 10px, 1px ;
-   transform: translateX(0);
-   transition: transform 2.5s ease-out;
+  background-image: url("../img/lineademeta.jpg");
+  background-position: 10px, 1px, 10px, 1px;
+  transform: translateX(0);
+  transition: transform 2.5s ease-out;
 }
 .tite__card:not(:hover)::before {
   transform: translateX(-100%);
@@ -301,7 +300,7 @@ ul:is(:focus-within, :hover) {
       padding: 10px;
     }
   }
-  
+
   @media screen and (max-width: 480px) {
     .tite__card {
       width: 100%;
@@ -323,11 +322,5 @@ ul:is(:focus-within, :hover) {
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
   }
-
-
-
 }
 /* FIN RESPONSIVE */
-
-
-

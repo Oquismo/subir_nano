@@ -1,4 +1,5 @@
-import React, { useState, useRef, useContext } from "react";
+import React, { useState, } from "react";
+
 import { useEffect } from "react";
 import mediano from "../img/mediano.jpeg";
 import horarios from "../img/horarios.jpeg";

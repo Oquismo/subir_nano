@@ -10,7 +10,10 @@ import carrousel9 from '../img/carrousel9.jpg';
 import carrousel10 from '../img/carrousel10.jpg';
 import carrousel11 from '../img/carrousel11.jpg';
 
+// Función Galeria que muestra una galería de imágenes
+
 function Galeria() {
+  
   const { carouselFragment, slideToNextItem } = useSpringCarousel({
     items: [
       {

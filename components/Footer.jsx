@@ -25,3 +25,5 @@ const Footer = () => {
 };
 
 export default Footer;
+
+// Simple footer en la que he redirecionado a mi pagina de linkedin y github 

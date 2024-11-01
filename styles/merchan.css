@@ -1,105 +1,101 @@
-.Merch-Ini{
-    text-align: center;
+/* Le da estilo al merchant */
+.Merch-Ini {
+  text-align: center;
 }
 
-.Merch-Ini h1{
-    margin-top: 0;
-
+.Merch-Ini h1 {
+  margin-top: 0;
 }
 
-.product-section{
-    padding: 3rem;
+.product-section {
+  padding: 3rem;
 }
 .product-flex {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  .product-item {
-    flex: 0 0 calc(33.33% - 1rem);
-    border: 1px solid #ccc;
-    border-radius: 0.5rem;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    transition: background-color 0.3s ease;
-  }
-  
-  .product-item:hover {
-    background-color: #2db411;
-  }
-  
-  .product-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-  }
-  
-  .product-description {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .product-price {
-    font-size: 1rem;
-    font-weight: bold;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
-  .product-itemRB{
-    flex: 0 0 calc(33.33% - 1rem);
-    border: 1px solid #ccc;
-    border-radius: 0.5rem;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    transition: background-color 0.3s ease;
+.product-item {
+  flex: 0 0 calc(33.33% - 1rem);
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  transition: background-color 0.3s ease;
+}
 
-  }
+.product-item:hover {
+  background-color: #2db411;
+}
 
-  .product-itemRB:hover{
+.product-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
 
-    background-color: #0004ff;
-  }
+.product-description {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-price {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.product-itemRB {
+  flex: 0 0 calc(33.33% - 1rem);
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.product-itemRB:hover {
+  background-color: #0004ff;
+}
 .product-button {
-    padding: 1rem;
-    background-color: #4CAF50; 
-    color: white; 
-    border: none; 
-    padding: 10px 20px; 
-    text-align: center; 
-    text-decoration: none; 
-    display: inline-block; 
-    font-size: 16px; 
-    cursor: pointer; 
-    border-radius: 4px; 
-    transition: background-color 0.3s ease; 
-  }
-  
-  .product-button:hover {
-    background-color: #3e8e41; 
-  }
+  padding: 1rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.product-button:hover {
+  background-color: #3e8e41;
+}
 /* RESPONSIVE */
 
 @media screen and (max-width: 600px) {
-
-
-.Merch-Ini {
+  .Merch-Ini {
     text-align: center;
   }
-  
+
   .Merch-Ini h1 {
     margin-top: 0;
   }
-  
+
   .product-section {
     padding: 3rem;
   }
-  
+
   .product-flex {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  
+
   .product-item {
     flex: 0 0 calc(33.33% - 1rem);
     border: 1px solid #ccc;
@@ -108,27 +104,27 @@
     margin-bottom: 1rem;
     transition: background-color 0.3s ease;
   }
-  
+
   .product-item:hover {
     background-color: #2db411;
   }
-  
+
   .product-title {
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
   }
-  
+
   .product-description {
     font-size: 1rem;
     margin-bottom: 0.5rem;
   }
-  
+
   .product-price {
     font-size: 1rem;
     font-weight: bold;
   }
-  
+
   .product-itemRB {
     flex: 0 0 calc(33.33% - 1rem);
     border: 1px solid #ccc;
@@ -137,35 +133,35 @@
     margin-bottom: 1rem;
     transition: background-color 0.3s ease;
   }
-  
+
   .product-itemRB:hover {
     background-color: #0004ff;
   }
-  
+
   .product-button {
     padding: 1rem;
-    background-color: #4CAF50; 
-    color: white; 
-    border: none; 
-    padding: 10px 20px; 
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
     text-align: center;
-    text-decoration: none; 
-    display: inline-block; 
-    font-size: 16px; 
-    cursor: pointer; 
-    border-radius: 4px; 
-    transition: background-color 0.3s ease; 
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
   }
-  
+
   .product-button:hover {
-    background-color: #3e8e41; 
+    background-color: #3e8e41;
   }
-  
+
   @media (max-width: 768px) {
     .product-flex {
       flex-direction: column;
     }
-  
+
     .product-item,
     .product-itemRB {
       flex: 0 0 100%;

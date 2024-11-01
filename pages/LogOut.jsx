@@ -31,5 +31,5 @@ function logOut() {
 
   )
 }
-
+//Con esto se genera el cierre de sesion 
 export default logOut

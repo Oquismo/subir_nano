@@ -1,4 +1,5 @@
 import React from "react";
+import { Suspense } from "react";
 import logo from "../img/logo hd.png";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
@@ -21,9 +22,12 @@ const {usuario} = useContext(UsuarioContext)
           <img src={logo} className="logo" alt="Logo F1" />
           <ul className="lista">       
             {usuario !== null && (
+          
           <li className="elemento__lista">
+          
           <Link to={'/logout'}> Cerrar Sesión </Link>
           </li>
+         
             )}
             <li className="elemento__lista">
               <Link to={"/galeria"}>Galeria</Link>
@@ -44,8 +48,11 @@ const {usuario} = useContext(UsuarioContext)
         </div>
         
       </header>
+     
     </>
   );
 }
 
 export default Header;
+
+// Header completo que se vera una vez inicies sesion y te deja entrar en las demas paginas 

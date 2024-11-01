@@ -1,48 +1,48 @@
 /* Le da estilo al footer */
 .footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .footer p {
-    margin-bottom: 10px;
-  }
-  
-  .footer ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; 
-    gap: 1px; 
-  }
-  
-  .footer ul li {
-    margin: 0 10px;
-    flex: 0 0 100%; 
-  }
-  
-  .footer ul li a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .footer ul li a:hover {
-    text-decoration: underline;
-  }
-  
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer p {
+  margin-bottom: 10px;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1px;
+}
+
+.footer ul li {
+  margin: 0 10px;
+  flex: 0 0 100%;
+}
+
+.footer ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer ul li a:hover {
+  text-decoration: underline;
+}
+
 /* RESPONSIVE */
-  @media (min-width: 768px) {
-    .footer ul li {
-      flex: 0 0 50%;
-    }
+@media (min-width: 768px) {
+  .footer ul li {
+    flex: 0 0 50%;
   }
-  
-  @media (min-width: 1024px) {
-    .footer ul li {
-      flex: 0 0 25%;
-    }
+}
+
+@media (min-width: 1024px) {
+  .footer ul li {
+    flex: 0 0 25%;
   }
+}

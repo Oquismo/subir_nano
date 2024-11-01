@@ -1,6 +1,6 @@
 import { useState, createContext } from "react";
 
-// Comentarios para esta página
+
 export const UsuarioContext = createContext();
 
 const UsuarioProvider = ({ children }) => {
@@ -20,7 +20,7 @@ const UsuarioProvider = ({ children }) => {
     };
 
     return (
-        // Proporciona el estado y las funciones al componente hijo
+        // Proporciona el estado y las funciones al componente
         <UsuarioContext.Provider value={{ usuario, login, logout }}>
             {children}
         </UsuarioContext.Provider>
