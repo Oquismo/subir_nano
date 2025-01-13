@@ -19,6 +19,8 @@ import Login from "../pages/Login";
 import "../styles/logout.css";
 import Merchant from "../pages/Merchant";
 import Galeria from "../pages/Galeria";
+import "../styles/tailwind.css"
+// import Noticias from "../pages/Noticias.astro";
 
 // Importando el contexto "UsuarioProvider" para proporcionar información sobre el usuario autenticado a los componentes
 import { UsuarioProvider } from "../contexto/UsuarioContext";
@@ -34,6 +36,7 @@ import HeaderOtros from "../components/HeaderOtros";
 import "../styles/merchan.css";
 import "../styles/footer.css";
 import "../styles/galeria.css";
+import App from './App'
 
 const Layout = ({ children }) => (
   <>
@@ -76,7 +79,7 @@ createRoot(document.getElementById("root")).render(
               </LayoutInvitado>
             }
           />{" "}
-          //prueba borrar linea
+        
           <Route
             path="/inicio"
             element={
@@ -94,13 +97,22 @@ createRoot(document.getElementById("root")).render(
             }
           />
           <Route
-            path="/merchan"
+            path="/app"
             element={
               <LayoutAtras>
-                <Merchant />
+                <App/>
               </LayoutAtras>
             }
+            
           />
+                    {/* <Route
+            path="/noticias"
+            element={
+              <LayoutAtras>
+                <Noticias />
+              </LayoutAtras>
+            }
+          /> */}
         </Routes>
       </Suspense>
     </UsuarioProvider>

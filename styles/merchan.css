@@ -2,27 +2,163 @@
 .Merch-Ini {
   text-align: center;
 }
-
+:where(img, svg, video) {
+  block-size: auto;
+  max-inline-size: 100%;
+ 
+}
 .Merch-Ini h1 {
   margin-top: 0;
 }
-
-.product-section {
-  padding: 3rem;
+.cart-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
 }
+/* Añade esta clase CSS al componente ProductItem */
+.product-image {
+  border-radius: 50%; /* Redondea las imágenes a 50% del tamaño */
+}
+.toggle-cart-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+}
+
+.cart {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.cart-items {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.scrollable::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+.scrollable::-webkit-scrollbar-thumb:hover {
+  background-color: #aaa;
+}
+
 .product-flex {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  
 }
 
-.product-item {
-  flex: 0 0 calc(33.33% - 1rem);
-  border: 1px solid #ccc;
-  border-radius: 0.5rem;
-  padding: 1rem;
-  margin-bottom: 1rem;
+.cart {
+  background-color: #04eccd;
+  border-radius: 8px;
+  padding: 16px;
+  max-width: 400px;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #0004ff;
+}
+
+.cart h2 {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 16px;
+  color: #0a0404;
+  
+}
+
+.cart p {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  color: #0004ff;
+}
+
+/* .cart-items {
+  max-height: 300px; 
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+
+} */
+
+.cart-items.scrollable {
+  overflow-y: auto;
+}
+
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.cart-item h4 {
+  font-size: 1.2em;
+  color: #444;
+}
+.cart-item h2 {
+  font-size: 1.2em;
+  color: #444;
+}
+
+.cart-item p {
+  font-size: 1em;
+  color: #555;
+}
+
+.cart-item button {
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
   transition: background-color 0.3s ease;
+}
+.product-section {
+  border-radius: 50%;
+  padding: 3rem;
+}
+
+.cart-item button:hover {
+  background-color: #e65a50;
+}
+
+/* Estilos de scrollbar */
+.cart-items::-webkit-scrollbar {
+  width: 8px;
+}
+
+.cart-items::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+.cart-items::-webkit-scrollbar-thumb:hover {
+  background-color: #aaa;
 }
 
 .product-item:hover {
@@ -35,30 +171,19 @@
   margin-bottom: 0.5rem;
 }
 
-.product-description {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-}
 
-.product-price {
-  font-size: 1rem;
-  font-weight: bold;
-}
 
-.product-itemRB {
-  flex: 0 0 calc(33.33% - 1rem);
-  border: 1px solid #ccc;
-  border-radius: 0.5rem;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  transition: background-color 0.3s ease;
-}
+
+
+
 
 .product-itemRB:hover {
   background-color: #0004ff;
 }
 .product-button {
-  padding: 1rem;
+  margin-top: 1rem;
+  margin: 1rem;
+  padding: 2rem;
   background-color: #4caf50;
   color: white;
   border: none;
@@ -70,11 +195,14 @@
   cursor: pointer;
   border-radius: 4px;
   transition: background-color 0.3s ease;
+ 
 }
 
 .product-button:hover {
   background-color: #3e8e41;
 }
+
+
 /* RESPONSIVE */
 
 @media screen and (max-width: 600px) {
@@ -88,18 +216,25 @@
 
   .product-section {
     padding: 3rem;
+    
   }
+
+  
 
   .product-flex {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    border-radius: 50%;
+  }
+  .image-style{
+    border-radius: 50%;
   }
 
   .product-item {
     flex: 0 0 calc(33.33% - 1rem);
     border: 1px solid #ccc;
-    border-radius: 0.5rem;
+    border-radius: 6.5rem;
     padding: 1rem;
     margin-bottom: 1rem;
     transition: background-color 0.3s ease;
@@ -123,6 +258,10 @@
   .product-price {
     font-size: 1rem;
     font-weight: bold;
+  }
+
+  .img{
+    border-radius: 3px;
   }
 
   .product-itemRB {
@@ -152,6 +291,7 @@
     border-radius: 4px;
     transition: background-color 0.3s ease;
   }
+  
 
   .product-button:hover {
     background-color: #3e8e41;
@@ -169,3 +309,20 @@
     }
   }
 }
+
+.product-section {
+  display: flex; /* Habilita Flexbox en el componente */
+  flex-direction: column; /* Alinea los elementos en columna */
+  align-items: center; /* Centra los elementos horizontalmente */
+  justify-content: center; /* Centra los elementos verticalmente */
+}
+
+.image-style {
+  display: flex; /* Habilita Flexbox en el contenedor de la imagen */
+  justify-content: center; /* Centra la imagen horizontalmente */
+}
+
+.product-button {
+  margin-top: 1rem; /* Añade un margen superior para separar el botón de la imagen */
+}
+

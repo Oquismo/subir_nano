@@ -67,7 +67,7 @@ function Galeria() {
         }
         slideToNextItem(currentIndex);
       }
-    }, 2000);
+    }, 3000);
 
     return () => {
       clearInterval(intervalRef.current);

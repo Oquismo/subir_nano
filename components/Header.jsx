@@ -35,7 +35,7 @@ const {usuario} = useContext(UsuarioContext)
 
           
               <li className="elemento__lista">
-                <Link to={"/merchan"}>Merchan</Link>
+                <Link to={"/app"}>Merchan</Link>
           
               </li>
               

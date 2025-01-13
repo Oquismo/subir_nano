@@ -1,6 +1,7 @@
 /*/----------------------------------------------------- 
 /* ESTE CSS LE DA ESTILO A LAS PAGINAS DE INICIO TANTO LA PRINCIPAL COMO LA DE INVITADO*/
 /* ------------------------------------------------------------------ */
+
 @import url(https://unpkg.com/open-props/open-props.min.css);
 @import url(https://unpkg.com/open-props/normalize.min.css);
 /* estos dos enlaces son ara añadir un modo oscuro */
@@ -8,6 +9,9 @@
   font-family: f1font;
   src: url(../files/Fonts/Oswald-Regular.ttf);
   /* fuente basada en la F1 */
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
 }
 body {
   margin: 0rem;
@@ -185,8 +189,8 @@ ul:is(:focus-within, :hover) {
 .tite__card {
   position: relative;
   overflow: hidden;
-  border-radius: 6rem;
-  transition: transform 2.5s ease-out;
+ 
+  
 }
 
 .tite__card::before {
@@ -201,7 +205,7 @@ ul:is(:focus-within, :hover) {
 }
 
 .tite__card:hover::before {
-  background-image: url("../img/lineademeta.jpg");
+
   background-position: 10px, 1px, 10px, 1px;
   transform: translateX(0);
   transition: transform 2.5s ease-out;
