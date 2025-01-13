@@ -31,6 +31,8 @@ import HeaderOtros from "../components/HeaderOtros";
 import "../styles/merchan.css";
 import "../styles/footer.css";
 import "../styles/galeria.css";
+import "../styles/registro.css";
+
 import App from './App';
 import Registro from "../pages/Registro";  // Importar el formulario de Registro
 
