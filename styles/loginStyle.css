@@ -26,6 +26,37 @@ body {
   background-color: #212529;
 }
 
+.registrarseButton {
+  margin-top: 20px;
+  padding: 12px 24px;
+  border: 2px solid #4caf50;
+  border-radius: 8px;
+  background-color: transparent;
+  color: #4caf50;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  width: 100%;
+}
+
+.registrarseButton:hover {
+  background-color: #4caf50;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.registrarseButton:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+}
+
+.registrarseButton:active {
+  background-color: #45a049;
+  transform: translateY(2px);
+}
+
 .logStyle label {
   display: block;
   margin-bottom: 5px;
@@ -99,5 +130,29 @@ body {
   .login-container {
     width: 100%;
     padding: 20px;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .registrarseButton {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+/* Media query para pantallas medianas (tabletas) */
+@media (max-width: 768px) {
+  .registrarseButton {
+    padding: 10px 22px;
+    font-size: 15px;
+  }
+}
+
+/* Media query para pantallas grandes */
+@media (min-width: 1024px) {
+  .registrarseButton {
+    padding: 12px 24px;
+    font-size: 16px;
   }
 }
