@@ -3,16 +3,20 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 function Registro() {
+  // Hook para redireccionar a otras rutas
   const redireccionar = useNavigate();
 
+  // Estados para almacenar los datos del formulario de registro
   const [usuario, setUsuario] = useState('');
   const [correo, setCorreo] = useState('');
   const [contrasena, setContrasena] = useState('');
   const [mensaje, setMensaje] = useState('');
 
+  // Manejar el envío del formulario
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    // Datos del registro
     const datosRegistro = {
       usuario,
       correo_usuario: correo,
@@ -23,6 +27,7 @@ function Registro() {
     axios
       .post('https://subir-nano-server.vercel.app/usuarios/register', datosRegistro)
       .then((response) => {
+        // Mostrar mensaje de respuesta del servidor
         setMensaje(response.data.mensaje);
         if (response.data.mensaje === 'Usuario registrado correctamente') {
           // Redirigir al login si el registro es exitoso
@@ -30,6 +35,7 @@ function Registro() {
         }
       })
       .catch((error) => {
+        // Mostrar mensaje de error si el registro falla
         setMensaje('Hubo un error al registrar el usuario');
         console.error(error);
       });

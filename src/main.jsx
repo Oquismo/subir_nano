@@ -13,7 +13,7 @@ import Inicio from "../pages/Inicio";
 import "../styles/style2.css";
 import Login from "../pages/Login";
 import "../styles/logout.css";
-import Merchant from "../pages/Merchant";
+
 import Galeria from "../pages/Galeria";
 import "../styles/tailwind.css";
 // import Noticias from "../pages/Noticias.astro";
@@ -32,7 +32,6 @@ import "../styles/merchan.css";
 import "../styles/footer.css";
 import "../styles/galeria.css";
 import "../styles/registro.css";
-
 import App from './App';
 import Registro from "../pages/Registro";  // Importar el formulario de Registro
 

@@ -6,11 +6,11 @@ import { UsuarioContext } from "../contexto/UsuarioContext";
 
 function Header() {
 
-const {usuario} = useContext(UsuarioContext)
+  // Obteniendo el usuario del contexto
+  const { usuario } = useContext(UsuarioContext);
 
   return (
     <>
-    
       <header>
         <ul>
           <li>
@@ -18,32 +18,32 @@ const {usuario} = useContext(UsuarioContext)
         </ul>
        
         <div className="header">
+          {/* Logo de la aplicación */}
           <img src={logo} className="logo" alt="Logo F1" />
           <ul className="lista">
-          <li className="elemento__lista">
-          <Link to={'/inicio'}>Volver a Inicio</Link>
-          </li>
-            {/* <li className="elemento__lista"><Link to={'/logout'}> Cerrar Sesion </Link></li> */}
+            {/* Enlace para volver a la página de inicio */}
+            <li className="elemento__lista">
+              <Link to={'/inicio'}>Volver a Inicio</Link>
+            </li>
+            {/* Mostrar enlace de cerrar sesión si el usuario está autenticado */}
             {usuario !== null && (
-          <li className="elemento__lista">
-          <Link to={'/logout'}> Cerrar Sesión </Link>
-          </li>
+              <li className="elemento__lista">
+                <Link to={'/logout'}> Cerrar Sesión </Link>
+              </li>
             )}
-            {usuario === null?<li className="elemento__lista"><Link to={'/'}>Login</Link></li>: <></>}
-
+            {/* Mostrar enlace de login si el usuario no está autenticado */}
+            {usuario === null ? (
+              <li className="elemento__lista">
+                <Link to={'/'}>Login</Link>
+              </li>
+            ) : (
+              <></>
+            )}
+            {/* Enlace a la galería */}
             <li className="elemento__lista">
               <Link to={"/galeria"}>Galeria</Link>
             </li>
-
-          
-              <li className="elemento__lista">
-                <Link to={"/merchan"}>Merchan</Link>
-          
-              </li>
-
           </ul>
-          <form action="0" method="get" className="elemento__lista"></form>
-          <p className="login"></p>
         </div>
       </header>
     </>
@@ -51,5 +51,3 @@ const {usuario} = useContext(UsuarioContext)
 }
 
 export default Header;
-
-// Header hecho para la ruta merch en el que se añade la opcion de volver atras

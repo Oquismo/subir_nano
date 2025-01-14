@@ -6,11 +6,11 @@ import { UsuarioContext } from "../contexto/UsuarioContext";
 
 function Header() {
 
-const {usuario} = useContext(UsuarioContext)
+  // Obteniendo el usuario del contexto
+  const { usuario } = useContext(UsuarioContext);
 
   return (
     <>
-    
       <header>
         <ul>
           <li>
@@ -18,15 +18,24 @@ const {usuario} = useContext(UsuarioContext)
         </ul>
        
         <div className="header">
+          {/* Logo de la aplicación */}
           <img src={logo} className="logo" alt="Logo F1" />
           <ul className="lista">
+            {/* Enlace de contacto */}
             <li className="elemento__listaInvitado">Contacto</li>
-            {/* <li className="elemento__lista"><Link to={'/logout'}> Cerrar Sesion </Link></li> */}
+            {/* Mostrar enlace de cerrar sesión si el usuario está autenticado */}
             {usuario !== null && (
-          <li className="elemento__listaInvitado">
-          </li>
+              <li className="elemento__listaInvitado">
+              </li>
             )}
-            {usuario === null?<li className="elemento__listaInvitado"><Link to={'/'}>Login</Link></li>: <></>}
+            {/* Mostrar enlace de login si el usuario no está autenticado */}
+            {usuario === null ? (
+              <li className="elemento__listaInvitado">
+                <Link to={'/'}>Login</Link>
+              </li>
+            ) : (
+              <></>
+            )}
           </ul>
           <form action="0" method="get" className="elemento__listaInvitado"></form>
           <p className="login"></p>
@@ -37,5 +46,3 @@ const {usuario} = useContext(UsuarioContext)
 }
 
 export default Header;
-
-// Header para la opcion entrar como invitado en el que no se llegan a mostrar todas las rutas 
