@@ -5,7 +5,7 @@ import ProductItem from './ProductItem';
 const ProductList = ({ products, addToCart }) => {
   return (
     <>
-      {/* Contenedor de productos con estilo flex */}
+      {/* Contenedor de productos  */}
       <div className='product-flex'>
         {/* Mapeando la lista de productos y renderizando un ProductItem para cada uno */}
         {products.map(product => (
